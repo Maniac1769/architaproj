@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey Form</title>
-    <link href="./styles.css" rel="stylesheet"/>
+    <title>Health and Wellness Survey</title>
+    <link href="style.css" rel="stylesheet"/>
      <head>
   <body>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <h1 id="title">Health and Wellness Survey</h1>
+    <p id="description">Understanding Health and Wellness Practices in Daily Life</p>
     
     <form id="survey-form">
       
@@ -18,31 +18,57 @@
     <label id="email-label"><p>Email</p>
     <input type="text" name="Email" id="email"placeholder="Enter your Email" required></label>
 
-    <label id="number-label"><p>Age (optional)</p>
-    <input type="text" name="age" id="age" placeholder="Age">
+    <label id="number-label"><p>Age </p>
+    <input type="text" name="age" id="age" placeholder="Age" required>
     </label>
 
-  <label id="dropdown" for="dropdown"><p>Which option best describes your current role?</p></label>
-    <select id="dropdown" name="roles">
-      <option value="" disabled selected>Select current role</option>
-      <option value="Student">Student</option>
-      <option value="fulltimejob">Full time Job</option>
-      <option value="Learner">Learner</option>
-      <option value="nosay">Prefer not to say</option>
-      <option value="other">other</option>
+  <label id="dropdown" for="dropdown"><p>What is your age group?</p></label>
+    <select id="dropdown" name="gender">
+      <option value="" disabled selected>Select gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="nosay">Other/Prefer not to say</option>
       </select>
+
+      <p>How many hours of sleep do you get on average per night?</p>
+        <label><input class="sleep" type="radio" name="definetly" checked>Less than 4 hours</label>
+        <label><input class="sleep" type="radio" name="Maybe">4–6 hours</label>
+        <label><input class="sleep" type="radio" name="not sure">6–8 hours</label>
+        <label><input class="sleep" type="radio" name="not sure">More than 8 hours</label>
       
-      <p>Would you recommend freeCodeCamp to a friend?</p>
+        <p>How often do you exercise or engage in physical activity?</p>
+        <label><input class="exercise" type="radio" name="definetly" checked>Daily</label>
+        <label><input class="exercise" type="radio" name="Maybe">A few times a week</label>
+        <label><input class="exercise" type="radio" name="not sure">Once a week</label>
+        <label><input class="exercise" type="radio" name="not sure">Rarely or never</label>
+        <select id="dropdown" name="physical activities">
+          <option value="" disabled selected>Physical Activities</option>
+          <option value="Walking">Walking</option>
+          <option value="Running">Running</option>
+          <option value="Yoga">Yoga</option>
+          <option value="Gym">Gym</option>
+          <option value="Sports">Sports</option>
+          <option value="others">others</option>
+          </select>
+
+          <p>How often do you feel stressed or anxious?</p>
+        <label><input class="stressed" type="radio" name="definetly">Daily</label>
+        <label><input class="stressed" type="radio" name="Maybe">Weekly</label>
+        <label><input class="stressed" type="radio" name="not sure">Monthly</label>
+        <label><input class="stressed" type="radio" name="not sure">Rarely</label>
+
+        <p>How often do you visit a doctor for regular health check-ups?</p>
+        <label><input class="docvisit" type="radio" name="definetly" >Yearly</label>
+        <label><input class="docvisit" type="radio" name="Maybe">Once every few years</label>
+        <label><input class="docvisit" type="radio" name="not sure">Only when needed</label>
+        <label><input class="docvisit" type="radio" name="not sure">Never</label>
+
+
+      <p>Would you recommend this survey to a friend?</p>
         <label><input class="rating" type="radio" name="definetly" checked>Definetly</label>
         <label><input class="rating" type="radio" name="Maybe">Maybe</label>
         <label><input class="rating" type="radio" name="not sure">Not Sure</label>
 
-      <label id="improv">What would you like to see improved?(Check all that apply)</label>
-      <label class="opt"><input type="checkbox" name="Front-end Projects">Front-end Projects</label>
-        <label class="opt"><input type="checkbox" name="Back-end Projects">Back-end Projects</label>
-        <label class="opt"><input type="checkbox" name="Data Visualization">Data Visualization</label>
-        <label class="opt"><input type="checkbox" name="Additional Courses">Additional Courses</label>
-       
        <p>Any comments or suggestions?</p>
        <textarea id="suggestions" name="suggestions" placeholder="Enter your comments here" rows="5" cols="50"></textarea>
        <button type="submit">Submit
